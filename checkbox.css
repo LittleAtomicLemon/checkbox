@@ -1,0 +1,73 @@
+body{
+  margin:0;
+  padding: 0;
+
+}
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%,50%);/* cette proprité permet de modifier l'espace de coordonnées utilisé pour la mise en forme visuelle.il est possible de tourneer distordre... des élts*/
+
+}
+
+
+
+input[ type="checkbox"]{
+  position:relative;
+  width: 80px;
+  height: 40px;
+  -webkit-appearance: none;/*permet de modifier la mise en forme native du système d'exploitation, et notamment d'annuler tous les styles de base pour pouvoir les re-styler tranquillement comme souhaité*/
+  background: red;
+  outline: none; /*est une propriété raccourcie qui permet de définir, dans une seule déclaration, une ou plusieurs des propriétés parmi outline-style, outline-width et outline-color.*/
+  border-radius:20px;
+  box-shadow: inset 0 0 5px orange;
+  transition: .5s;
+
+}
+
+
+input:checked[ type="checkbox"]{/* Ici on va définir la couleur de fond au passage du clic sur la checkbox*/
+  background-color: green;
+  ;
+}
+
+input[ type="checkbox"]:before{/* ici sera difinit le css pour insérer un élément"fantôme" avant dasn le contenu de l'élement ciblé */
+  content: "";
+  position:absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,.2);
+  transition: .5s;
+
+}
+
+input:checked[ type="checkbox"]:before
+{
+  left: 40px;
+}
+
+.oui{
+  position: absolute;
+  bottom: 17px;
+  left: 8px;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.non{
+  position: absolute;
+  bottom: 17px;
+  right: 5px;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+
+}
+

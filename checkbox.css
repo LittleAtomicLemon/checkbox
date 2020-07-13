@@ -3,16 +3,16 @@ body{
   padding: 0;
 
 }
+/* Classe qui permet de centrer */
 .center{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(50%,50%);/* cette proprité permet de modifier l'espace de coordonnées utilisé pour la mise en forme visuelle.il est possible de tourneer distordre... des élts*/
-
 }
 
 
-
+/* Selecteur sur input checkbox */
 input[ type="checkbox"]{
   position:relative;
   width: 80px;
